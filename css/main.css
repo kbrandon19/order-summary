@@ -1,0 +1,37 @@
+:root {
+  --pale-blue:hsl(225, 100%, 94%);
+  --bright-blue:hsl(245, 75%, 52%);
+  --vpale-blue:hsl(225, 100%, 98%);
+  --desaturated-blue:hsl(224, 23%, 55%);
+  --dark-blue:hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-image: url("/images/pattern-background-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--vpale-blue);
+  padding: 0;
+  margin: 0;
+}
+
+body p {
+  font-size: 16px;
+}
+
+.main-container {
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+  padding: 0px 20px 0px 20px;
+}
+
+/* Changes for Desktop View */
+@media only screen and (min-width: 1024px) {
+  body {
+    background-image: url("/images/pattern-background-desktop.svg");
+  }
+}
+/*# sourceMappingURL=main.css.map */
