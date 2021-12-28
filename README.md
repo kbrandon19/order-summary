@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/kbrandon19/order-summary](https://github.com/kbrandon19/order-summary)
 - Live Site URL: [https://kbrandon19.github.io/order-summary/](https://kbrandon19.github.io/order-summary/)
 
 ## My process
