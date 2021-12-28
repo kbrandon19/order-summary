@@ -1,38 +1,163 @@
+@import url(https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap);
+
 :root{
     --pale-blue:hsl(225, 100%, 94%);
     --bright-blue:hsl(245, 75%, 52%);
     --vpale-blue:hsl(225, 100%, 98%);
     --desaturated-blue:hsl(224, 23%, 55%);
     --dark-blue:hsl(223, 47%, 23%);
+
+
+    --fw-light:500;
+    --fw-normal:700;
+    --fw-bold:900;
 }
 
-body {
-    
-    font-family: 'Red Hat Display', sans-serif;
-    background-image: url("/images/pattern-background-mobile.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var(--vpale-blue);
+
+/* reset values */
+
+// removes default margin
+body,h1,h2,h3,h4,h5,h6,p,ul,li{margin:0;}
+
+//box sizing rules
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// makes images easier to size and work with
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select,a {
+  font: inherit;
+}
+
+
+  /* end of reset */
+
+  body {
+    min-height: 100vh;
     padding:0;
-    margin:0;
+    margin: 0;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color:var(--pale-blue);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Red Hat Display', sans-serif;
+    flex-wrap: nowrap;
 
-    p{
-    font-size:16px;
-}
-}
+    main{
+        width:auto;
+        height:100%;
+        padding:0 1rem;
 
-.main-container{
-    width:100%;
-    height:auto;
-    border:1px solid red;
-    padding:0px 20px 0px 20px;
-}
+        .order-summary-container{
+            min-width:330px;
+            max-width: 410px;
+            height:auto;
+            background-color:#fff;
+            border-radius:25px;
+            
 
-/* Changes for Desktop View */
-@media only screen and  (min-width:1024px){
+            .order-hero-image img{
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+            }
+            .order-content{
+                padding:0 1.5rem 1rem 1.5rem;
+            .order-text{
+                text-align: center;
+                margin:2rem 0;
 
+                h1{
+                    font-size: 1.5rem;
+                    color:var(--dark-blue);
+                    margin-bottom:1rem;
+                }
+                p{color:var(--desaturated-blue);padding:.5em;}
+                }
+
+            .order-price{
+                height:auto;
+                width:100%;
+                padding:1rem 1rem;
+                border-radius:10px;
+                background-color: var(--vpale-blue);
+                margin-bottom:2rem;
+                
+                ul{padding:0;}
+                ul li{  
+                    display: inline-block;
+                    list-style-type: none;
+                    vertical-align: middle;
+                    
+                    .plan-price{
+                        margin:0 2.4rem 0 1rem;
+                    }
+                }
+
+                ul li h2{
+                    color:var(--dark-blue);
+                    font-size: 1rem;
+                }
+
+                ul li p{
+                    color:var(--desaturated-blue);
+                }
+
+                a#change-plan{
+                    font-size:.9em;
+                }
+            
+                
+                }
+
+                .order-payment{
+                    text-align: center;
+                    
+                    button{
+                        width:100%;
+                        padding: 1rem 0;
+                        color:#ffffff;
+                        background-color: var(--bright-blue);
+                        border:none;
+                        border-radius: 10px;
+                        box-shadow: 0px 5px 50px -15px var(--bright-blue);
+                        margin-bottom:1rem;
+                    }
+
+                    a#cancel-order{
+                        color: var(--desaturated-blue);
+                        text-decoration: none;
+                        font-weight: var(--fw-normal);
+                    }
+                   
+                }
+            }
+        }
+    }
+  }
+
+  
+/* media query */
+
+@media screen and (min-width:48rem){
     body{
-        background-image: url("/images/pattern-background-desktop.svg"); 
+        background-image:url(../images/pattern-background-desktop.svg);
+        background-position: top;
+        background-size: contain;
     }
 }
