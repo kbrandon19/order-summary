@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop](../screenshots/order-summary-desktop.png)
-![Mobile](../screenshots/order-summary-mobile.png)
+![Desktop](./screenshots/order-summary-desktop.png)
+![Mobile](./screenshots/order-summary-mobile.png)
 
 
 
